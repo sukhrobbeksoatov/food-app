@@ -1,0 +1,77 @@
+.app-section {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+    position: relative;
+
+    @media only screen and (max-width: $tablet-l) {
+      padding-bottom: 90px;
+    }
+  }
+
+  &__img {
+    width: 548px;
+    height: 640px;
+    transform: translateY(-170px);
+    transition: transform 0.4s ease 0.2s, width 0.5s ease;
+
+    @media only screen and (max-width: $tablet-l) {
+      transform: translateY(0);
+      margin-bottom: 60px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      width: 90%;
+      height: auto;
+    }
+
+    &:hover {
+      transform: translateY(-170px) scale(0.9);
+
+      @media only screen and (max-width: $tablet-l) {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  &__title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 44px;
+    color: $black;
+    line-height: 1.5;
+    text-align: center;
+    transition: font-size 0.5s ease;
+
+    @media only screen and (max-width: $tablet-l) {
+      font-size: 38px;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      font-size: 32px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      font-size: 24px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 884px;
+      height: 3px;
+      background-color: $light-gray;
+      margin: 0 auto;
+      margin-bottom: 73px;
+
+      @media only screen and (max-width: $tablet-l) {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -40px;
+      }
+    }
+  }
+}

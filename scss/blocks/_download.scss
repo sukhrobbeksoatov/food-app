@@ -1,0 +1,40 @@
+.download-section {
+  background: url(../images/download-bg-image.png) no-repeat center;
+  background-size: cover;
+  height: 516px;
+  padding-top: 136px;
+
+  &__wrapper {
+    color: $white;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    margin-bottom: 60px;
+  }
+
+  &__play-store-btn {
+    padding: 17px 30px;
+    border: 1px solid $orange;
+    color: $white;
+    background-color: $orange;
+    border-radius: 10px;
+    margin-right: 16px;
+  }
+
+  &__app-store-btn {
+    padding: 17px 30px;
+    border: 1px solid $white;
+    color: $white;
+    background-color: transparent;
+    border-radius: 10px;
+    margin-right: 16px;
+  }
+}

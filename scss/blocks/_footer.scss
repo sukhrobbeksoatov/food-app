@@ -1,0 +1,39 @@
+.site-footer {
+  padding: 27px 0;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__icons {
+    color: $orange;
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: $dark-blue;
+    }
+  }
+
+  .copyright {
+    font-weight: 600;
+    font-size: 18px;
+    color: $dark-blue;
+
+    &__link {
+      color: $orange;
+      transition: color 0.5s ease;
+
+      &:hover {
+        color: $dark-blue;
+      }
+    }
+  }
+}

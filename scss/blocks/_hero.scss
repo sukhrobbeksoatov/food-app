@@ -1,0 +1,125 @@
+.hero-section {
+  background: url("../images/hero-image.png") no-repeat center;
+  background-size: cover;
+  position: relative;
+  height: 660px;
+
+  @media only screen and (max-width: $mobile) {
+    background: none;
+  }
+
+  &__wrapper {
+    padding: 73px 0 220px;
+    text-align: center;
+  }
+
+  &__title {
+    text-align: center;
+    color: $white;
+    margin-bottom: 17px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.5;
+    transition: color 0.4s ease, font-size 0.5s ease;
+
+    @media only screen and (max-width: $tablet-l) {
+      font-size: 20px;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      font-size: 18px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      color: $gray;
+      font-size: 16px;
+    }
+  }
+
+  &__heading {
+    color: $white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 1.2;
+    margin-bottom: 27px;
+    transition: font-size 0.5s ease, color 0.5s ease;
+
+    @media only screen and (max-width: $tablet-l) {
+      font-size: 48px;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      font-size: 42px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      font-size: 36px;
+      color: $dark-blue;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__description {
+    color: $white;
+    margin-bottom: 54px;
+    transition: color 0.5s ease;
+
+    @media only screen and (max-width: $mobile) {
+      color: $gray;
+    }
+  }
+
+  &__buttons {
+    @media only screen and (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__play-store-btn {
+    margin-right: 34px;
+    border: 1px solid $orange;
+    padding: 15px 58px;
+    background-color: $orange;
+    display: inline-block;
+    border-radius: 30px;
+    color: $white;
+    letter-spacing: 0.1px;
+    transition: transform 0.5s ease;
+
+    @media only screen and (max-width: $mobile) {
+      margin: 0 0 15px;
+      font-size: 18px;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__app-store-btn {
+    padding: 15px 58px;
+    border: 1px solid $white;
+    background-color: transparent;
+    display: inline-block;
+    border-radius: 30px;
+    color: $white;
+    letter-spacing: 0.1px;
+    transition: transform 0.5s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    @media only screen and (max-width: $mobile) {
+      font-size: 18px;
+      color: $orange;
+      border-color: $orange;
+    }
+  }
+}

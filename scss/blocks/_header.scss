@@ -1,0 +1,158 @@
+.site-header {
+  padding: 20px 0;
+  background-color: $white;
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  width: 100%;
+
+  @media only screen and (max-width: $tablet) {
+    padding: 17px 0;
+    position: static;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo__img {
+    max-width: 206px;
+    max-height: 101px;
+    width: auto;
+    height: auto;
+    transition: max-width 0.5s ease;
+
+    @media only screen and (max-width: $tablet) {
+      max-width: 160px;
+    }
+  }
+
+  // hamburger styles
+  #hamburger:checked {
+    + .hamburger-icons {
+      #open {
+        display: none;
+      }
+
+      #close {
+        display: block;
+      }
+    }
+
+    ~ .sitenav .sitenav__list {
+      right: 0;
+    }
+  }
+
+  #open,
+  #close {
+    font-size: 40px;
+    position: fixed;
+    color: $dark-blue;
+    z-index: 101;
+    top: 41px;
+    right: 20px;
+    background-color: $orange;
+    border-radius: 5px;
+    display: none;
+  }
+
+  #open {
+    @media only screen and (max-width: $mobile) {
+      display: block;
+    }
+  }
+
+  .sitenav {
+    &__list {
+      display: flex;
+      align-items: center;
+      gap: 74px;
+      transition: gap 0.5s ease;
+
+      @media only screen and (max-width: $tablet-l) {
+        gap: 60px;
+      }
+
+      @media only screen and (max-width: $tablet) {
+        gap: 44px;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+        width: 65%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: $dark-blue;
+        padding: 20px 0 0 40px;
+        right: -100%;
+        transition: 1s ease;
+      }
+    }
+
+    &__link {
+      font-size: 20px;
+      line-height: 1.5;
+      font-weight: 600;
+      color: $dark-blue;
+      position: relative;
+      transition: color 0.5s ease, opacity 0.5s ease, font-size 0.5s ease;
+
+      @media only screen and (max-width: $tablet-l) {
+        font-size: 18px;
+      }
+
+      @media only screen and (max-width: $tablet) {
+        font-size: 16px;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        font-size: 20px;
+        color: $white;
+      }
+
+      &:hover {
+        color: $orange;
+      }
+
+      &:active {
+        opacity: 0.8;
+      }
+
+      &:focus {
+        color: $orange;
+        opacity: 0.6;
+
+        @media only screen and (max-width: $mobile) {
+          opacity: 1;
+          color: $white;
+        }
+      }
+
+      &:hover::after {
+        transform: scale(1);
+        transform-origin: right;
+      }
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        background-color: $orange;
+        bottom: -6px;
+        left: 0;
+        transform: scale(0);
+        transform-origin: left;
+        transition: transform 0.5s ease;
+      }
+    }
+  }
+}

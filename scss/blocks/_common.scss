@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// html styles
+html {
+  scroll-behavior: smooth;
+}
+
+// Body styles
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  color: $gray;
+  background-color: $white;
+}
+
+img {
+  display: block;
+}
+
+// Container styles
+.container {
+  width: 100%;
+  max-width: $desktop;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Visually hidden styles
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// To up btn styles
+.to-up {
+  position: fixed;
+  bottom: 100px;
+  right: 40px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $orange;
+  border-radius: 50px;
+  color: $white;
+  font-size: 40px;
+
+  @media only screen and (max-width: $tablet-l) {
+    display: none;
+  }
+}
