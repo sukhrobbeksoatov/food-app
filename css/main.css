@@ -191,6 +191,7 @@ img {
     background-color: #252b42;
     padding: 20px 0 0 40px;
     right: -100%;
+    z-index: 100;
     transition: 1s ease;
   }
 }
@@ -394,7 +395,7 @@ img {
   width: 548px;
   height: 640px;
   transform: translateY(-170px);
-  transition: transform 0.4s ease 0.2s, width 0.5s ease;
+  transition: transform 0.4s ease, width 0.5s ease;
 }
 @media only screen and (max-width: 992px) {
   .app-section__img {
@@ -409,7 +410,7 @@ img {
   }
 }
 .app-section__img:hover {
-  transform: translateY(-170px) scale(0.9);
+  transform: translateY(-170px) scale(1.04);
 }
 @media only screen and (max-width: 992px) {
   .app-section__img:hover {
@@ -493,7 +494,14 @@ img {
   }
 }
 .features-section__img {
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, width 0.5s ease;
+}
+@media only screen and (max-width: 576px) {
+  .features-section__img {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+  }
 }
 .features-section__img:hover {
   transform: scale(1.05);
@@ -523,4 +531,151 @@ img {
 }
 .features-section__description {
   max-width: 467px;
+}
+
+.download-section {
+  background: url(../images/download-bg-image.png) no-repeat center;
+  background-size: cover;
+  height: 516px;
+  padding-top: 136px;
+}
+@media only screen and (max-width: 576px) {
+  .download-section {
+    background: none;
+    background-color: #252b42;
+    height: auto;
+    padding-bottom: 100px;
+  }
+}
+.download-section__wrapper {
+  color: #fff;
+  text-align: center;
+}
+.download-section__title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.download-section__description {
+  margin-bottom: 60px;
+}
+@media only screen and (max-width: 768px) {
+  .download-section__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+.download-section__play-store-btn {
+  padding: 17px 30px;
+  border: 1px solid #fa4a0c;
+  color: #fff;
+  white-space: nowrap;
+  background-color: #fa4a0c;
+  border-radius: 10px;
+  margin-right: 16px;
+}
+@media only screen and (max-width: 576px) {
+  .download-section__play-store-btn {
+    display: none;
+  }
+}
+.download-section__app-store-btn {
+  padding: 17px 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 576px) {
+  .download-section__app-store-btn {
+    display: none;
+  }
+}
+.download-section__buy-btn, .download-section__try-btn {
+  display: none;
+}
+@media only screen and (max-width: 576px) {
+  .download-section__buy-btn, .download-section__try-btn {
+    display: inline-block;
+  }
+}
+.download-section__buy-btn {
+  padding: 17px 30px;
+  border: 1px solid #fa4a0c;
+  color: #fff;
+  white-space: nowrap;
+  background-color: #fa4a0c;
+  border-radius: 10px;
+}
+.download-section__try-btn {
+  padding: 17px 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.site-footer {
+  padding: 27px 0;
+}
+.site-footer__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 768px) {
+  .site-footer__wrapper {
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+  }
+}
+.site-footer .logo__img {
+  transition: width 0.5s ease;
+}
+@media only screen and (max-width: 768px) {
+  .site-footer .logo__img {
+    height: auto;
+    width: 160px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .site-footer .logo__img {
+    display: none;
+  }
+}
+.site-footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.site-footer__icons {
+  color: #fa4a0c;
+  transition: color 0.5s ease;
+}
+.site-footer__icons:hover {
+  color: #252b42;
+}
+.site-footer .copyright {
+  font-weight: 600;
+  font-size: 18px;
+  color: #252b42;
+}
+@media only screen and (max-width: 768px) {
+  .site-footer .copyright {
+    text-align: center;
+  }
+}
+.site-footer .copyright__link {
+  color: #fa4a0c;
+  transition: color 0.5s ease;
+}
+.site-footer .copyright__link:hover {
+  color: #252b42;
 }/*# sourceMappingURL=main.css.map */

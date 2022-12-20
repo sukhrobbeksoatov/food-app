@@ -31,7 +31,13 @@
   }
 
   &__img {
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, width 0.5s ease;
+
+    @media only screen and (max-width: $mobile) {
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+    }
 
     &:hover {
       transform: scale(1.05);

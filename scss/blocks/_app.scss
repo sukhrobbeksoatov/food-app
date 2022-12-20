@@ -15,7 +15,7 @@
     width: 548px;
     height: 640px;
     transform: translateY(-170px);
-    transition: transform 0.4s ease 0.2s, width 0.5s ease;
+    transition: transform 0.4s ease, width 0.5s ease;
 
     @media only screen and (max-width: $tablet-l) {
       transform: translateY(0);
@@ -28,7 +28,7 @@
     }
 
     &:hover {
-      transform: translateY(-170px) scale(0.9);
+      transform: translateY(-170px) scale(1.04);
 
       @media only screen and (max-width: $tablet-l) {
         transform: scale(0.9);

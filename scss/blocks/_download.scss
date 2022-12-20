@@ -4,6 +4,13 @@
   height: 516px;
   padding-top: 136px;
 
+  @media only screen and (max-width: $mobile) {
+    background: none;
+    background-color: $dark-blue;
+    height: auto;
+    padding-bottom: 100px;
+  }
+
   &__wrapper {
     color: $white;
     text-align: center;
@@ -20,13 +27,28 @@
     margin-bottom: 60px;
   }
 
+  &__buttons {
+    @media only screen and (max-width: $tablet) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+  }
+
   &__play-store-btn {
     padding: 17px 30px;
     border: 1px solid $orange;
     color: $white;
+    white-space: nowrap;
     background-color: $orange;
     border-radius: 10px;
     margin-right: 16px;
+
+    @media only screen and (max-width: $mobile) {
+      display: none;
+    }
   }
 
   &__app-store-btn {
@@ -35,6 +57,37 @@
     color: $white;
     background-color: transparent;
     border-radius: 10px;
-    margin-right: 16px;
+    white-space: nowrap;
+
+    @media only screen and (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__buy-btn,
+  &__try-btn {
+    display: none;
+
+    @media only screen and (max-width: $mobile) {
+      display: inline-block;
+    }
+  }
+
+  &__buy-btn {
+    padding: 17px 30px;
+    border: 1px solid $orange;
+    color: $white;
+    white-space: nowrap;
+    background-color: $orange;
+    border-radius: 10px;
+  }
+
+  &__try-btn {
+    padding: 17px 30px;
+    border: 1px solid $white;
+    color: $white;
+    background-color: transparent;
+    border-radius: 10px;
+    white-space: nowrap;
   }
 }

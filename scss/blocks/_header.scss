@@ -92,6 +92,7 @@
         background-color: $dark-blue;
         padding: 20px 0 0 40px;
         right: -100%;
+        z-index: 100;
         transition: 1s ease;
       }
     }
