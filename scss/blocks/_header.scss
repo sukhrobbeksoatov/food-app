@@ -1,5 +1,5 @@
 .site-header {
-  padding: 20px 0;
+  padding: 10px 0;
   background-color: $white;
   z-index: 10;
   position: sticky;
@@ -7,7 +7,7 @@
   width: 100%;
 
   @media only screen and (max-width: $tablet) {
-    padding: 17px 0;
+    padding: 5px 0;
     position: static;
   }
 
@@ -31,7 +31,7 @@
 
   // hamburger styles
   #hamburger:checked {
-    + .hamburger-icons {
+    +.hamburger-icons {
       #open {
         display: none;
       }
@@ -41,7 +41,7 @@
       }
     }
 
-    ~ .sitenav .sitenav__list {
+    ~.sitenav .sitenav__list {
       right: 0;
     }
   }

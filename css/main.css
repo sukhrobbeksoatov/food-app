@@ -86,7 +86,7 @@ img {
 
 .to-up {
   position: fixed;
-  bottom: 50px;
+  bottom: 100px;
   right: 40px;
   width: 70px;
   height: 70px;
@@ -105,7 +105,7 @@ img {
 }
 
 .site-header {
-  padding: 20px 0;
+  padding: 10px 0;
   background-color: #fff;
   z-index: 10;
   position: -webkit-sticky;
@@ -115,7 +115,7 @@ img {
 }
 @media only screen and (max-width: 768px) {
   .site-header {
-    padding: 17px 0;
+    padding: 5px 0;
     position: static;
   }
 }
